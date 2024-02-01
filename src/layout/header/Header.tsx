@@ -1,13 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
+import {Menu, PropsMenu} from "../../components/menu/Menu";
 
 export const Header = () => {
+    const items = [
+        {id: '1', href: '#', text: 'Home'},
+        {id: '2', href: '#', text: 'Skills'},
+        {id: '3', href: '#', text: 'Works'},
+        {id: '4', href: '#', text: 'Testimony'},
+        {id: '5', href: '#', text: 'Contacts'},]
+
     return (
         <StyledHeader>
             <Logo/>
-            <Menu/>
+            <Menu items={items}/>
         </StyledHeader>
     );
 };
