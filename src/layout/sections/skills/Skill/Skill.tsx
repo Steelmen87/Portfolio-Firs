@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
-import styled from "styled-components";
+import styled, {useTheme} from "styled-components";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
 
 type SkillPropsType = {
     id: string
@@ -8,41 +9,56 @@ type SkillPropsType = {
     skillText: string
 }
 export const Skill = ({skillText, id, title}: SkillPropsType) => {
+    const theme = useTheme()
     return (
         <StyledSkill>
-            <Icon iconId={id}/>
-            <SkillTitle> {title}</SkillTitle>
-            <SkillText>{skillText}</SkillText>
+            <FlexWrapper direction={"column"} align={"center"}>
+                <IconWrapper>
+                    <Icon iconId={id}/>
+                </IconWrapper>
+                <SkillTitle>{title.toUpperCase()}</SkillTitle>
+                <SkillText>{skillText}</SkillText>
+            </FlexWrapper>
         </StyledSkill>
     );
 };
 const StyledSkill = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 33%;
+    width: 380px;
     max-width: 400px;
-    background-color: rgba(255,255,255,0.56);
-    margin: 5px;
+    padding: 62px 20px 40px;
 `
-// TODO: Change Style - StyledSkill
+const IconWrapper = styled.div`
+    position: relative;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        transform: rotate(45deg) translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, .1);
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-origin: top left;
+
+    }
+`
 
 const SkillTitle = styled.h3`
-    font-family: Josefin Sans;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 1px;
-    text-align: left;
-
-    color: #fff;
+    margin: 70px 0 15px;
 
 `
 const SkillText = styled.p`
-    font-family: Poppins;
     font-size: 14px;
     font-weight: 400;
-    line-height: 21px;
+    line-height: 1.4;
     letter-spacing: 0;
     text-align: center;
 

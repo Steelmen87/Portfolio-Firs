@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {useTheme} from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./Skill/Skill";
+import {Container} from "../../../components/Container";
 
 const skillsObject = [
     {
@@ -36,20 +37,22 @@ const skillsObject = [
     },
 ]
 export const Skills = () => {
+    const theme = useTheme()
     const allSkills = skillsObject
         .map(s => <Skill id={s.id} title={s.title} skillText={s.skillText}/>)
     return (
         <StyledSkills>
-            <SectionTitle>My skills</SectionTitle>
-            <FlexWrapper wrap={'wrap'} justify={'space-around'}>
-                {allSkills}
-            </FlexWrapper>
+            <Container>
+                <SectionTitle theme={theme}>My skills</SectionTitle>
+                <FlexWrapper wrap={'wrap'} justify={'space-around'}>
+                    {allSkills}
+                </FlexWrapper>
+            </Container>
         </StyledSkills>
     );
 };
 
 
 export const StyledSkills = styled.section`
-    background-color: #545353;
-    min-height: 100vh;
+    
 `
