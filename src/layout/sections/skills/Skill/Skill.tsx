@@ -9,7 +9,6 @@ type SkillPropsType = {
     skillText: string
 }
 export const Skill = ({skillText, id, title}: SkillPropsType) => {
-    const theme = useTheme()
     return (
         <StyledSkill>
             <FlexWrapper direction={"column"} align={"center"}>
