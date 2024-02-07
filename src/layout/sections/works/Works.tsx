@@ -34,7 +34,7 @@ export const Works = () => {
                 'sed do eiusmod tempor incididunt ' +
                 'ut labore et dolore magna aliqua Ut enim.',
             link1: '#',
-            title: 'Social Network',
+            title: 'Counter',
             id: '2'
         }
     ]

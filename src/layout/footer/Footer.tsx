@@ -17,7 +17,7 @@ export const Footer = () => {
                     //TODO add component SocialItem and - to map
                 </SocialList>
                 <Copyright>
-                    © 2023 Svetlana Dyablo, All Rights Reserved.
+                    © 2023 Konstantin Petrov, All Rights Reserved.
                 </Copyright>
             </FlexWrapper>
 
