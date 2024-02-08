@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {useTheme} from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
 
 export const Slider = () => {
+    const theme = useTheme()
     return (
         <StyledSlider>
             <FlexWrapper>
@@ -13,9 +14,9 @@ export const Slider = () => {
                     <Name>@Konstantin Petrov</Name>
                 </Slide>
             </FlexWrapper>
-            <Pagination>
+            <Pagination theme={theme}>
                 <span></span>
-                <span></span>
+                <span className={"active"}></span>
                 <span></span>
             </Pagination>
         </StyledSlider>
@@ -26,7 +27,7 @@ const StyledSlider = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     border: 1px solid;
     max-width: 500px;`
 const Slide = styled.div`
@@ -36,15 +37,31 @@ const Text = styled.div`
     margin: 10px 0;
 `
 const Name = styled.div`
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 22px 0 42px;
 
 `
 const Pagination = styled.div`
     span {
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: 7px;
+        height: 7px;
         margin: 5px;
-        background-color: #f60ecf;
-        border-radius: 5px;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 20px;
+
+        & + span {
+            margin-left: 5px;
+        }
+
+        &.active {
+            background-color: ${props => props.theme.colors.accent};
+            width: 20px;
+        }
     }
 `

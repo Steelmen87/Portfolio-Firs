@@ -26,7 +26,7 @@ const StyledSkill = styled.div`
     max-width: 400px;
     padding: 62px 20px 40px;
 `
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
     position: relative;
 
     &::before {
