@@ -15,7 +15,7 @@ export const Skill = ({skillText, id, title}: SkillPropsType) => {
                 <IconWrapper>
                     <Icon iconId={id}/>
                 </IconWrapper>
-                <SkillTitle>{title.toUpperCase()}</SkillTitle>
+                <SkillTitle>{title}</SkillTitle>
                 <SkillText>{skillText}</SkillText>
             </FlexWrapper>
         </StyledSkill>
@@ -46,20 +46,10 @@ const IconWrapper = styled.div`
 `
 
 const SkillTitle = styled.h3`
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 1px;
     margin: 70px 0 15px;
+    text-transform: uppercase;
 
 `
 const SkillText = styled.p`
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: 0;
     text-align: center;
-
-    color: #fff;
 `
