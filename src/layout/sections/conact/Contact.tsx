@@ -1,37 +1,65 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {useTheme} from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
+import {Container} from "../../../components/Container";
 
 export const Contact = () => {
+    const theme = useTheme()
     return (
         <StyledContacts>
-            <SectionTitle>Contact</SectionTitle>
-            <StyledForm>
-                <Field placeholder={"name"}/>
-                <Field placeholder={"subject"}/>
-                <Field placeholder={"message"} as={"textarea"}/>
-                <Button type={"submit"}>Send message</Button>
-            </StyledForm>
+            <Container theme={theme}>
+                <SectionTitle>Contact</SectionTitle>
+                <StyledForm>
+                    <Field placeholder={"name"}/>
+                    <Field placeholder={"subject"}/>
+                    <Field placeholder={"message"} as={"textarea"}/>
+                    <Button type={"submit"}>Send message</Button>
+                </StyledForm>
+            </Container>
         </StyledContacts>
     );
 };
 const StyledContacts = styled.section`
-    min-height: 50vh;
-    background-color: #f5e39e;
+
 `
 
 const StyledForm = styled.form`
-    max-width: 500px;
+    max-width: 540px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    
+    align-items: center;
+    gap: 16px;
+
     margin: 0 auto;
+
+    textarea {
+        resize: none;
+        height: 155px;
+    }
 `
 
 const Field = styled.input`
+    width: 100%;
+    background-color: ${props => props.theme.colors.secondaryBg};
+    border: 1px solid ${props => props.theme.colors.borderColor};
+    padding: 7px 15px;
 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+
+    color: ${props => props.theme.colors.font};
+
+    &::placeholder {
+        color: ${props => props.theme.colors.placeholderColor};
+        text-transform: capitalize;
+    }
+
+    &:focus-visible {
+        outline: 1px solid ${props => props.theme.colors.borderColor};
+    }
 `
 
