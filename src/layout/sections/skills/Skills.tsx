@@ -39,7 +39,7 @@ const skillsObject = [
 export const Skills = () => {
     const theme = useTheme()
     const allSkills = skillsObject
-        .map(s => <Skill id={s.id} title={s.title} skillText={s.skillText}/>)
+        .map((s, index) => <Skill key={index} id={s.id} title={s.title} skillText={s.skillText}/>)
     return (
         <StyledSkills>
             <Container>
@@ -54,5 +54,5 @@ export const Skills = () => {
 
 
 export const StyledSkills = styled.section`
-    
+
 `

@@ -1,20 +1,27 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {useTheme} from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
 
+
+const iconSocial = ['instagram', 'linkedIn', 'telegram', 'vk']
 export const Footer = () => {
+    const theme = useTheme()
     return (
-        <StyledFooter>
+        <StyledFooter theme={theme}>
             <FlexWrapper direction={"column"} align={"center"}>
                 <Name>Konstantin</Name>
+
                 <SocialList>
-                    <SocialItem>
+                    {iconSocial.map((icon, index) => (<SocialItem key={index}>
                         <SocialLink>
-                            <Icon height={"21px"} width={"21px"} viewBox={"0 0 21px 21px"} iconId={"instagram"}/>
+                            <Icon
+                                height={"21px"}
+                                width={"21px"}
+                                viewBox={"0 0 21 21"}
+                                iconId={icon}/>
                         </SocialLink>
-                    </SocialItem>
-                    //TODO add component SocialItem and - to map
+                    </SocialItem>))}
                 </SocialList>
                 <Copyright>
                     © 2023 Konstantin Petrov, All Rights Reserved.
@@ -25,18 +32,45 @@ export const Footer = () => {
     );
 };
 const StyledFooter = styled.footer`
-    background-color: #fddea4;
-    min-height: 20vh;
+    background-color: ${props => props.theme.colors.primaryBg};
+    padding: 40px 0;
 `
-const Name = styled.span``
+const Name = styled.span`
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 3px;
+`
 const SocialList = styled.ul`
     display: flex;
-    gap: 30px;
+
+    gap: 20px;
+    margin: 30px 0;
 
 `
-const SocialLink = styled.a``
+const SocialLink = styled.a`
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
 
-const Copyright = styled.small``
+    color: ${props => props.theme.colors.accent};
+
+    &:hover {
+        color: ${props => props.theme.colors.primaryBg};
+        transform: translateY(-4px);
+
+    }
+`
+
+const Copyright = styled.small`
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.5;
+`
 
 const SocialItem = styled.li`
 
