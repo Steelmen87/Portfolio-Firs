@@ -41,11 +41,15 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
         cursor: pointer;
         color: ${theme.colors.font};
-       
+
     }
 
     section {
         padding: 100px 0;
+        /*@media ${theme.media.mobile} {
+            padding: 80px 0;
+        }*/
+        //TODO question for mentor 
     }
 
     section:nth-of-type(odd) {

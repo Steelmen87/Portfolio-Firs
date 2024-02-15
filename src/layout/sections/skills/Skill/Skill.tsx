@@ -22,9 +22,13 @@ export const Skill = ({skillText, id, title}: SkillPropsType) => {
     );
 };
 const StyledSkill = styled.div`
-    width: 380px;
+    width: 330px;
+    flex-grow: 1;
     max-width: 400px;
     padding: 62px 20px 40px;
+    @media ${props => props.theme.media.mobile} {
+        padding: 62px 0 40px;
+    }
 `
 export const IconWrapper = styled.div`
     position: relative;

@@ -7,6 +7,16 @@ import {Container} from "../../../components/Container";
 
 const skillsObject = [
     {
+        id: 'react',
+        title: 'react',
+        skillText: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    },
+    {
+        id: 'typeScript',
+        title: 'typeScript',
+        skillText: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    },
+    {
         id: 'codeSvg',
         title: 'html5',
         skillText: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
@@ -22,17 +32,8 @@ const skillsObject = [
         skillText: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
     },
     {
-        id: 'typeScript',
-        title: 'typeScript',
-        skillText: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
-    },
-    {
         id: 'styledComponent',
         title: 'styledComponent',
-        skillText: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
-    }, {
-        id: 'react',
-        title: 'react',
         skillText: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
     },
 ]
