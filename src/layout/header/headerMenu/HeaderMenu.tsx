@@ -38,6 +38,10 @@ const StyledHeaderMenu = styled.nav`
         gap: 30px;
         justify-content: center;
     }
+
+    @media ${props => props.theme.media.tablet} {
+        display: none;
+    }
 `
 
 

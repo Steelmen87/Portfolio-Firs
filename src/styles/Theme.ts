@@ -5,8 +5,12 @@ export const theme = {
         accent: "#7572D5",
 
         font: "#FFFFFF",
-        borderColor:'#4a4a4a',
+        borderColor: '#4a4a4a',
 
-        placeholderColor:"#495057"
+        placeholderColor: "#495057"
+    },
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
     }
 }
