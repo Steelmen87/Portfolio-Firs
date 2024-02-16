@@ -21,11 +21,14 @@ export const TabMenu = ({items}: PropsMenu) => {
     );
 };
 const StyledTabMenu = styled.nav`
-    margin-bottom: 40px;
     ul {
         display: flex;
-        gap: 20px;
-        justify-content: center;
+        /*gap: 20px;*/
+        justify-content: space-between;
+        max-width: 352px;
+        width: 100%;
+        border: 1px solid orangered;
+        margin: 0 auto 40px;
     }
 `
 const ListItem = styled.li`
