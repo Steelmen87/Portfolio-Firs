@@ -21,7 +21,7 @@ export const Contact = () => {
     );
 };
 const StyledContacts = styled.section`
-
+    margin-top: -24px;
 `
 
 const StyledForm = styled.form`

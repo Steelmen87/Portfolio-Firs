@@ -33,7 +33,6 @@ export const Work = (props: WorkPropsType) => {
 };
 const StyledWork = styled.div`
     background-color: ${props => props.theme.colors.secondaryBg};
-
     width: 330px;
     flex-grow: 1;
 

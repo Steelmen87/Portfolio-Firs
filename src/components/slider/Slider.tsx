@@ -34,7 +34,7 @@ const Slide = styled.div`
     text-align: center;
 `
 const Text = styled.div`
-    margin: 10px 0;
+    margin: -12px 0;
 `
 const Name = styled.div`
     font-family: 'Josefin Sans', sans-serif;

@@ -11,11 +11,11 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-around"} theme={theme} wrap={"wrap"}>
-                    <div>
+                    <BlockWrapper>
                         <SmallText> Hi There </SmallText>
                         <Name> I am <span>Petrov Konstantin</span></Name>
                         <MainTitle> A Web Developer </MainTitle>
-                    </div>
+                    </BlockWrapper>
                     <PhotoWrapper>
                         <Photo src={photo}/>
                     </PhotoWrapper>
@@ -24,6 +24,12 @@ export const Main = () => {
         </StyledMain>
     );
 };
+const BlockWrapper = styled.div`
+    margin-top: -72px;
+    @media ${props => props.theme.media.mobile} {
+        margin-top: -3px;
+    }
+`
 const StyledMain = styled.section`
     min-height: 100vh;
     display: flex;
@@ -32,7 +38,6 @@ const StyledMain = styled.section`
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 0;
-    margin-top: 65px;
 
     &::before {
         content: "";
@@ -45,11 +50,16 @@ const PhotoWrapper = styled.div`
         left: 20px;
         z-index: -1;
         @media ${props => props.theme.media.mobile} {
+
             width: 290px;
             height: 480px;
             top: -19px;
             left: 26px;
         }
+    }
+
+    @media ${props => props.theme.media.mobile} {
+        margin-top: 65px;
     }
 `
 const Photo = styled.img`

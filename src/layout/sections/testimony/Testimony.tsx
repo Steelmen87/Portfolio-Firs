@@ -14,7 +14,7 @@ export const Testimony = () => {
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
                     <IconWrapper>
-                        <Icon iconId={"quote"}/>
+                        <Icon iconId={"quote"} viewBox={"0 0 50 30"}/>
                     </IconWrapper>
                     <Slider/>
                 </FlexWrapper>
@@ -28,7 +28,7 @@ const StyledTestimony = styled.section`
     min-height: 50vh;
 
     ${IconWrapper} {
-        margin: 52px 0 72px;
+        margin: 30px 0 72px;
     }
 
 `

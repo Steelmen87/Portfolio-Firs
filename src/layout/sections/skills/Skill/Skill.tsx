@@ -25,9 +25,9 @@ const StyledSkill = styled.div`
     width: 330px;
     flex-grow: 1;
     max-width: 400px;
-    padding: 62px 20px 40px;
+    padding: 52px 20px 62px;
     @media ${props => props.theme.media.mobile} {
-        padding: 62px 0 40px;
+        padding: 12px 0 112px;
     }
 `
 export const IconWrapper = styled.div`
