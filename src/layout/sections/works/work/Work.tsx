@@ -5,6 +5,7 @@ import {Button} from "../../../../components/Button";
 
 export type WorkPropsType = {
     id?: string
+    type:'react'|'spa'|'landing'
     title: string
     text: string
     img: string

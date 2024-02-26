@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {TabMenu} from "./tabMenu/TabMenu";
@@ -8,12 +8,19 @@ import imgWork from './../../../assets/images/NetWork.png'
 import second from './../../../assets/images/Second.png'
 import {Container} from "../../../components/Container";
 
+export type StatusType = 'all' | 'landing' | 'react' | 'spa';
 export const Works = () => {
-    const items = [
-        {id: '1', href: '#', text: 'All'},
-        {id: '2', href: '#', text: 'landing page'},
-        {id: '3', href: '#', text: 'React'},
-        {id: '4', href: '#', text: 'spa'},
+    type ItemsType = {
+        id: string
+        href: string
+        text: string
+        status: StatusType
+    }[]
+    const items: ItemsType = [
+        {id: '1', href: '#', text: 'All', status: 'all'},
+        {id: '2', href: '#', text: 'landing page', status: 'landing'},
+        {id: '3', href: '#', text: 'React', status: 'react'},
+        {id: '4', href: '#', text: 'spa', status: 'spa'},
     ]
     const itemWorks: WorkPropsType[] = [
         {
@@ -27,7 +34,8 @@ export const Works = () => {
                 'ut labore et dolore magna aliqua Ut enim.',
             link1: '#',
             title: 'Social Network',
-            id: '1'
+            id: '1',
+            type: "spa"
         },
         {
             img: `${second}`,
@@ -38,22 +46,46 @@ export const Works = () => {
                 'ut labore et dolore magna aliqua Ut enim.',
             link1: '#',
             title: 'Counter',
-            id: '2'
+            id: '2',
+            type: "react"
         }
     ]
+    const [currentFilterStatus, setCurrentFilterStatus] = useState<StatusType>('all')
+    let filteredWorks = itemWorks;
+    if (currentFilterStatus === 'landing') {
+        filteredWorks = itemWorks.filter(work => work.type === 'landing')
+    }
+    if (currentFilterStatus === 'react') {
+        filteredWorks = itemWorks.filter(work => work.type === 'react')
+    }
+    if (currentFilterStatus === 'spa') {
+        filteredWorks = itemWorks.filter(work => work.type === 'spa')
+    }
+    if (currentFilterStatus === 'all') {
+        filteredWorks = itemWorks
+    }
+    const changeFilter = (status: StatusType) => {
+        setCurrentFilterStatus(status)
+    }
     return (
         <StyledWorks>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
-                <TabMenu items={items}/>
+                <TabMenu
+                    currentFilterStatus={currentFilterStatus}
+                    items={items}
+                    changeFilter={changeFilter}
+                />
                 <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={"wrap"}>
-                    {itemWorks.map((work) => (
+                    {filteredWorks.map((work) => (
                         <Work
+                            type={work.type}
                             img={work.img}
                             title={work.title}
                             text={work.text}
                             link1={work.link1}
-                            link2={work.link2} key={work.id}/>))}
+                            link2={work.link2}
+                            key={work.id}/>))}
                 </FlexWrapper>
             </Container>
         </StyledWorks>

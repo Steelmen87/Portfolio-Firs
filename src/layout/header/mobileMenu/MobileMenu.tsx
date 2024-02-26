@@ -17,7 +17,7 @@ export const MobileMenu = ({items}: PropsMenu) => {
             <BurgerButton isOpen={active} onClick={() => setActive(!active)}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={active}>
+            <MobileMenuPopup isOpen={active} onClick={() => setActive(false)}>
                 <ul>
                     {items.map(item => <ListItem key={item.id}><Link href={item.href}>
                         {item.text}

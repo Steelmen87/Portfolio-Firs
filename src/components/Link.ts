@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
-export const Link = styled.a`
+export const Link = styled.a<{active?:boolean}>`
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -25,5 +25,8 @@ export const Link = styled.a`
         right: 0;
         background-color: ${props => props.theme.colors.accent};
         z-index: -1;
+        ${props=>props.active && css<{active?:boolean}>`
+            height: 10px;
+        `}
     }
 `
