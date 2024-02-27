@@ -8,11 +8,11 @@ import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 export const Header = () => {
     const items = [
-        {id: '1', href: '#', text: 'Home'},
-        {id: '2', href: '#', text: 'Skills'},
-        {id: '3', href: '#', text: 'Works'},
-        {id: '4', href: '#', text: 'Testimony'},
-        {id: '5', href: '#', text: 'Contacts'},]
+        {id: '1', href: 'home', text: 'Home'},
+        {id: '2', href: 'skills', text: 'Skills'},
+        {id: '3', href: 'works', text: 'Works'},
+        {id: '4', href: 'testimony', text: 'Testimony'},
+        {id: '5', href: 'contacts', text: 'Contacts'},]
 
     return (
         <StyledHeader>

@@ -9,7 +9,7 @@ import {Container} from "../../../components/Container";
 
 export const Testimony = () => {
     return (
-        <StyledTestimony>
+        <StyledTestimony id={'testimony'}>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>

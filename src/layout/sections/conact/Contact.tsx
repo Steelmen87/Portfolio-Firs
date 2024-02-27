@@ -7,7 +7,7 @@ import {Container} from "../../../components/Container";
 export const Contact = () => {
     const theme = useTheme()
     return (
-        <StyledContacts>
+        <StyledContacts id={"contacts"}>
             <Container theme={theme}>
                 <SectionTitle>Contact</SectionTitle>
                 <StyledForm>

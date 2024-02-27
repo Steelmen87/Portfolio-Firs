@@ -68,7 +68,7 @@ export const Works = () => {
         setCurrentFilterStatus(status)
     }
     return (
-        <StyledWorks>
+        <StyledWorks id={'works'}>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu

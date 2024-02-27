@@ -42,7 +42,7 @@ export const Skills = () => {
     const allSkills = skillsObject
         .map((s, index) => <Skill key={index} id={s.id} title={s.title} skillText={s.skillText}/>)
     return (
-        <StyledSkills>
+        <StyledSkills id={'skills'}>
             <Container>
                 <SectionTitle theme={theme}>My skills</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-around'}>

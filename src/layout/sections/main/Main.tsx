@@ -10,7 +10,7 @@ import Tilt from 'react-parallax-tilt';
 export const Main = () => {
     const theme = useTheme()
     return (
-        <StyledMain>
+        <StyledMain id={'home'}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-around"} theme={theme} wrap={"wrap"}>
                     <BlockWrapper>
