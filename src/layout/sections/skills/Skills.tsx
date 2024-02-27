@@ -55,5 +55,5 @@ export const Skills = () => {
 
 
 export const StyledSkills = styled.section`
-
+    position: relative;
 `
