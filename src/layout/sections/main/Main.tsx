@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {font} from "../../../styles/Common";
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Main = () => {
     const theme = useTheme()
@@ -20,16 +21,18 @@ export const Main = () => {
                             <p>A Web Developer.</p>
                             <Typewriter
                                 options={{
-                                    strings: ['A Web Developer.','A Frontend Developer'],
-                                    autoStart:true,
-                                    loop:true
+                                    strings: ['A Web Developer.', 'A Frontend Developer'],
+                                    autoStart: true,
+                                    loop: true
                                 }}
                             />
                         </MainTitle>
                     </BlockWrapper>
-                    <PhotoWrapper>
-                        <Photo src={photo}/>
-                    </PhotoWrapper>
+                    <Tilt>
+                        <PhotoWrapper>
+                            <Photo src={photo}/>
+                        </PhotoWrapper>
+                    </Tilt>
                 </FlexWrapper>
             </Container>
         </StyledMain>
