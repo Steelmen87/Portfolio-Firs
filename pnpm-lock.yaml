@@ -170,6 +170,9 @@ dependencies:
   typescript:
     specifier: 4.4.2
     version: 4.4.2
+  typewriter-effect:
+    specifier: ^2.21.0
+    version: 2.21.0(react-dom@18.2.0)(react@18.2.0)
   web-vitals:
     specifier: 2.1.0
     version: 2.1.0
@@ -9748,6 +9751,18 @@ packages:
     resolution: {integrity: sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: false
+
+  /typewriter-effect@2.21.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Y3VL1fuJpUBj0gS4OTXBLzy1gnYTYaBuVuuO99tGNyTkkub5CXi+b/hsV7Og9fp6HlhogOwWJwgq7iXI5sQlEg==}
+    peerDependencies:
+      react: ^17.x || ^18.x
+      react-dom: ^17.x || ^18.x
+    dependencies:
+      prop-types: 15.8.1
+      raf: 3.4.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /unbox-primitive@1.0.2:

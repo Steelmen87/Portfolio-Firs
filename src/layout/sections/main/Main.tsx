@@ -4,6 +4,7 @@ import photo from './../../../assets/images/Photo.png'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {font} from "../../../styles/Common";
+import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
     const theme = useTheme()
@@ -14,7 +15,17 @@ export const Main = () => {
                     <BlockWrapper>
                         <SmallText> Hi There </SmallText>
                         <Name> I am <span>Petrov Konstantin</span></Name>
-                        <MainTitle> A Web Developer </MainTitle>
+                        {/* <MainTitle> A Web Developer </MainTitle>*/}
+                        <MainTitle>
+                            <p>A Web Developer.</p>
+                            <Typewriter
+                                options={{
+                                    strings: ['A Web Developer.','A Frontend Developer'],
+                                    autoStart:true,
+                                    loop:true
+                                }}
+                            />
+                        </MainTitle>
                     </BlockWrapper>
                     <PhotoWrapper>
                         <Photo src={photo}/>
@@ -74,10 +85,12 @@ const Photo = styled.img`
     }
 `
 const MainTitle = styled.h1`
-    ${font({weight: 400, Fmax: 27, Fmin: 20})} 
-        /* font-size: 27px;
-    font-weight: 400;*/
-    letter-spacing: 0;
+    ${font({weight: 400, Fmax: 27, Fmin: 20})} /* font-size: 27px;
+    font-weight: 400;*/ letter-spacing: 0;
+
+    p {
+        display: none;
+    }
 `
 
 const Name = styled.h2`
@@ -85,12 +98,13 @@ const Name = styled.h2`
     font-size: 50px;
     font-weight: 700;*/ letter-spacing: 0.05em;
     margin: 10px 0;
-    
+
 
     span {
         position: relative;
         z-index: 0;
         white-space: nowrap;
+
         &::before {
             content: "";
             display: inline-block;
