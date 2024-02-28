@@ -5,6 +5,7 @@ import './../../styles/Slider.css'
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import {theme} from "../../styles/Theme";
 
 const responsive = {
     0: {items: 1},
@@ -67,31 +68,13 @@ const Name = styled.div`
     margin: 22px 0 42px;
 
 `
-/*const Pagination = styled.div`
-    span {
-        display: inline-block;
-        width: 7px;
-        height: 7px;
-        margin: 5px;
-        background-color: rgba(255, 255, 255, .5);
-        border-radius: 20px;
 
-        & + span {
-            margin-left: 5px;
-        }
-
-        &.active {
-            background-color: ${props => props.theme.colors.accent};
-            width: 20px;
-        }
-    }
-`*/
 const StyledSlider = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    border: 1px solid;
+    background-color: ${theme.colors.primaryBg};
+    /*border: 1px solid;*/
     max-width: 500px;
     width: 100%;
 `

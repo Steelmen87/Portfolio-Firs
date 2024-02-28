@@ -25,7 +25,7 @@ export const Footer = () => {
                     </SocialItem>))}
                 </SocialList>
                 <Copyright>
-                    © 2023 Konstantin Petrov, All Rights Reserved.
+                    © 2024 Konstantin Petrov, All Rights Reserved.
                 </Copyright>
             </FlexWrapper>
 

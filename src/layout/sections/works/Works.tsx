@@ -7,6 +7,7 @@ import {Work, WorkPropsType} from "./work/Work";
 import imgWork from './../../../assets/images/NetWork.png'
 import second from './../../../assets/images/Second.png'
 import {Container} from "../../../components/Container";
+import {AnimatePresence, motion} from "framer-motion";
 
 export type StatusType = 'all' | 'landing' | 'react' | 'spa';
 export const Works = () => {
@@ -77,15 +78,32 @@ export const Works = () => {
                     changeFilter={changeFilter}
                 />
                 <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={"wrap"}>
-                    {filteredWorks.map((work) => (
-                        <Work
-                            type={work.type}
-                            img={work.img}
-                            title={work.title}
-                            text={work.text}
-                            link1={work.link1}
-                            link2={work.link2}
-                            key={work.id}/>))}
+                    <AnimatePresence>
+                        {filteredWorks.map((work) => {
+                            return (
+                                <motion.div style={{
+                                    width: "400px",
+                                    flexGrow: 1,
+                                    maxWidth: "540px"
+                                }}
+                                            initial={{opacity: 0}}
+                                            animate={{opacity: 1}}
+                                            exit={{opacity: 0}}
+                                            key={work.id}
+                                            layout
+                                >
+                                    <Work
+                                        type={work.type}
+                                        img={work.img}
+                                        title={work.title}
+                                        text={work.text}
+                                        link1={work.link1}
+                                        link2={work.link2}
+                                        key={work.id}/>
+                                </motion.div>
+                            )
+                        })}
+                    </AnimatePresence>
                 </FlexWrapper>
             </Container>
         </StyledWorks>
