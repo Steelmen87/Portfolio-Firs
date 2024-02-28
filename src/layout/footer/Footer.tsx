@@ -17,8 +17,8 @@ export const Footer = () => {
                     {iconSocial.map((icon, index) => (<SocialItem key={index}>
                         <SocialLink>
                             <Icon
-                                height={"21px"}
-                                width={"21px"}
+                                height={"21"}
+                                width={"21"}
                                 viewBox={"0 0 21 21"}
                                 iconId={icon}/>
                         </SocialLink>
@@ -59,6 +59,9 @@ const SocialLink = styled.a`
     width: 35px;
     height: 35px;
 
+    //animation
+    transition: ${props => props.theme.animations.transition};
+    
     color: ${props => props.theme.colors.accent};
 
     &:hover {

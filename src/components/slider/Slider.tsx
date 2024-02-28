@@ -52,28 +52,7 @@ export const Slider = () => (
     />
     </StyledSlider>
 );
-/*
-export const Slider = () => {
-    const theme = useTheme()
-    return (
-        <StyledSlider>
-            <FlexWrapper>
-                <Slide>
-                    <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda atque, delectus earum
-                        id impedit ipsam minus numquam perferendis quaerat qui sed, sequi soluta? Dolor ipsa nobis
-                        pariatur quos unde?</Text>
-                    <Name>@Konstantin Petrov</Name>
-                </Slide>
-            </FlexWrapper>
-            <Pagination theme={theme}>
-                <span></span>
-                <span className={"active"}></span>
-                <span></span>
-            </Pagination>
-        </StyledSlider>
-    );
-};
-*/
+
 
 const Text = styled.div`
     margin: 2px 0;
@@ -88,7 +67,7 @@ const Name = styled.div`
     margin: 22px 0 42px;
 
 `
-const Pagination = styled.div`
+/*const Pagination = styled.div`
     span {
         display: inline-block;
         width: 7px;
@@ -106,7 +85,7 @@ const Pagination = styled.div`
             width: 20px;
         }
     }
-`
+`*/
 const StyledSlider = styled.div`
     display: flex;
     flex-direction: column;

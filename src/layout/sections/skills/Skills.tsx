@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./Skill/Skill";
 import {Container} from "../../../components/Container";
+import {Fade} from "react-awesome-reveal";
 
 const skillsObject = [
     {
@@ -46,7 +47,9 @@ export const Skills = () => {
             <Container>
                 <SectionTitle theme={theme}>My skills</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-around'}>
-                    {allSkills}
+                    <Fade cascade damping={0.2}>
+                        {allSkills}
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </StyledSkills>

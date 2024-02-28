@@ -14,6 +14,8 @@ export const Mask = styled.span`
     overflow: hidden;
     /*outline: 1px solid red;*/
     color: ${props => props.theme.colors.accent};
+    //animation
+    transition: ${props => props.theme.animations.transition};
 
     & + & {
         top: 50%;
@@ -45,6 +47,8 @@ export const NavLink = styled(Link)`
         right: -10px;
         z-index: 1;
         transform: scale(0);
+        //animation
+        transition: ${props => props.theme.animations.transition};
     }
 
     &:hover,

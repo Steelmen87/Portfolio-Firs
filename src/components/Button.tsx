@@ -33,6 +33,9 @@ export const Button = styled.button`
         width: 50%;
         background-color: ${theme.colors.accent};
 
+        //animation
+        transition: ${props => props.theme.animations.transition};
+
     }
 
 `

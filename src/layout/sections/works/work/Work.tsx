@@ -45,6 +45,8 @@ const StyledWork = styled.div`
         }
     }
 
+   
+
     @media ${props => props.theme.media.desktop} {
         max-width: 540px;
     }
@@ -57,8 +59,9 @@ const ImageWrapper = styled.div`
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
-
+        transform: translate(-50%, -40%);
+        //animation
+        transition: ${props => props.theme.animations.transition};
         &::before {
             height: 100%;
             width: 100%;
@@ -74,8 +77,10 @@ const ImageWrapper = styled.div`
         top: 0;
         bottom: 0;
         background: rgba(0, 0, 0, .3);
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(2px);
         opacity: 0;
+        //animation
+        transition: ${props => props.theme.animations.transition};
     }
 
     &:hover {
@@ -85,6 +90,8 @@ const ImageWrapper = styled.div`
 
         ${Button} {
             opacity: 1;
+            transform: translate(-50%, -50%);
+           
         }
     }
     @media ${props=>props.theme.media.tablet} {
