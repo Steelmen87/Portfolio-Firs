@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {GlobalStyle} from "./styles/Global.style";
 import {ThemeProvider} from "styled-components";
-import {theme} from "./styles/Theme";
+import App from "./App";
+import {theme} from "./project20/styles/Theme";
+import {GlobalStyle} from "./project20/styles/Global.style";
+
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
