@@ -54,14 +54,14 @@ export const GlobalStyle = createGlobalStyle`
         //TODO question for mentor 
     }
 
-    section:nth-of-type(odd) {
+    /*section:nth-of-type(odd) {
         background-color: ${theme.colors.primaryBg};
     }
 
     section:nth-of-type(even) {
         background-color: ${theme.colors.secondaryBg};
     }
-
+*/
     h3 {
         font-family: 'Josefin Sans', sans-serif;
         font-size: 16px;
