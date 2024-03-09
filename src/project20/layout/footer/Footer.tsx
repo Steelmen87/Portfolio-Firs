@@ -28,13 +28,24 @@ export const Footer = () => {
     );
 };
 const StyledFooter = styled.footer`
-    background-color: #f6aa37;
-    max-height: 344px;
-    width: 100%;
+   
+    height: 344px;
     position: relative;
+
+    ${FlexWrapper} {
+        padding: 0;
+        
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    //todo
+    /*Медиа запрос height: 344px; уменьшить для приближения  Konstantin Petrov 2024 к StyledBackgroundImage*/
 `
 const StyledBackgroundImage = styled.img`
-    position: relative;
+    position: absolute;
+    max-height: 344px;
     bottom: 0;
     width: 100%;
 `

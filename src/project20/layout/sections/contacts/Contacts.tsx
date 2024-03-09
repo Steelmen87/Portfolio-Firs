@@ -17,7 +17,7 @@ export const Contacts = () => {
     );
 };
 const StyledContact = styled.section`
-    min-height: 50vh;
+   /* min-height: 50vh;*/
     background-color: #f1b088;
 `
 const StyledForm = styled.form`
