@@ -11,5 +11,5 @@ export const SectionTitle = ({title}:propsSectionTitle) => {
     );
 };
 const StyledSectionTitle = styled.h2`
-
+    text-align: center;
 `
