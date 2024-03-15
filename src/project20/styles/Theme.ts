@@ -1,10 +1,11 @@
 export const theme = {
     colors: {
-        primaryBg: "#1F1F20",
-        secondaryBg: "#252527",
+        primaryBg: "#F5F5F5",
+        /*secondaryBg: "#252527",*/
         accent: "#7572D5",
 
-        font: "#333333",
+        font: "#25282B",
+        fontP:"#828282",
         borderColor: '#4a4a4a',
 
         placeholderColor: "#495057"
