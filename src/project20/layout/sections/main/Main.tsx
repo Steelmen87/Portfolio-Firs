@@ -72,5 +72,8 @@ const ShotText = styled.span`
 const StyledButtonBlock = styled.div`
     display: flex;
     border: 1px solid red;
+    button + button {
+        padding-left: 12px;
+    }
 `
 
