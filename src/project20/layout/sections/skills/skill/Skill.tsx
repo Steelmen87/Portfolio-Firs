@@ -7,7 +7,7 @@ type propsType = {
 export const Skill = ({iconId}:propsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={iconId} width={"114"} height={"101"} viewBox={"0 0 114 101"}/>
+            <Icon iconId={iconId} width={"119"} height={"119"} viewBox={"0 0 119 119"}/>
         </StyledSkill>
     );
 };
@@ -15,7 +15,8 @@ const StyledSkill = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 16.6%;
-    background-color: #fff;
-    margin: 10px;
+    width: 120px;
+    height: 120px;
+    border:1px solid red;
+    
 `

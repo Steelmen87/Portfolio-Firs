@@ -9,7 +9,7 @@ type propsType = {
 }
 export const Icon = ({iconId, width, height, viewBox}: propsType) => {
     return (
-        <svg width={width || "50"} height={height || "50"} viewBox={viewBox || "0 0 50 50"} fill="none"
+        <svg width={width || "119"} height={height || "119"} viewBox={viewBox || "0 0 119 119"} fill="none"
              xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${iconsSprite}#${iconId}`}/>
         </svg>

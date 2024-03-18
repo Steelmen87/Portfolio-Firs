@@ -32,7 +32,7 @@ const Photo = styled.img`
     /*width: 390px;*/
     height: 620px;
     object-fit: cover;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
  
     position: relative;
     top: -1px;
@@ -41,11 +41,10 @@ const Photo = styled.img`
 const BlockInfo = styled.div`
     max-width: 570px;
     width: 100%;
-    border: 1px solid red;
+   /* border: 1px solid red;*/
 `
 const StyledMain = styled.div`
     min-height: 50vh;
-
     display: flex;
 
 `
@@ -61,7 +60,7 @@ const Name = styled.h2`
     font-weight: 700;
     font-size: 64px;
     letter-spacing: 0;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 `
 const ShotText = styled.span`
     font-size: 24px;

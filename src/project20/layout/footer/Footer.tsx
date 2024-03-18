@@ -18,6 +18,8 @@ export const Footer = () => {
                     <SocialItem>
                         <SocialLink>
                             <Icon iconId={"instagram"}/>
+                            <Icon iconId={"instagram"}/>
+                            <Icon iconId={"instagram"}/>
                         </SocialLink>
                     </SocialItem>
                 </SocialList>

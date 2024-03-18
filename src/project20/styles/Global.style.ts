@@ -47,8 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section {
-        padding: 100px 0;
-            
+        padding: 144px 0;
         //TODO question for mentor 
     }
 
