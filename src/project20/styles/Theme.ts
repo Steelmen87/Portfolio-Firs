@@ -6,7 +6,6 @@ export const theme = {
         font: "#25282B",
         fontP:"#828282",
         borderColor: '#4a4a4a',
-
         placeholderColor: "#495057"
     },
     media: {

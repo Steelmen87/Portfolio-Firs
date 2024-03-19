@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.font};
+        background-color: ${theme.colors.primaryBg};
         line-height: 1.2;
 
         /*min-width: 360px;*/
@@ -47,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section {
-        padding: 144px 0;
+        padding-bottom: 144px;
         //TODO question for mentor 
     }
 

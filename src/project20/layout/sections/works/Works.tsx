@@ -10,12 +10,13 @@ import second from "./../../../assets/images/Second.png"
 const itemsWork = [
     {id: "1", img: `${social}`, title: "Social network", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."},
     {id: "2", img: `${second}`, title: "Counter", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."},
+    {id: "3", img: `${second}`, title: "Counter", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."},
 ]
 export const Works = () => {
     return (
         <StyledWorks>
             <SectionTitle title={"Works"}/>
-            <FlexWrapper justify={"center"} wrap={"wrap"}>
+            <StyleWorksWrapper>
                 {itemsWork.map(item => (
                     <Work
                         key={item.id}
@@ -23,11 +24,21 @@ export const Works = () => {
                         title={item.title}
                         text={item.text}/>
                 ))}
-            </FlexWrapper>
+            </StyleWorksWrapper>
         </StyledWorks>
     );
 };
 const StyledWorks = styled.section`
     min-height: 100vh;
-    background-color: #acc3f6;
+    /*background-color: #acc3f6;*/
+`
+const StyleWorksWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    row-gap: 78px;
 `

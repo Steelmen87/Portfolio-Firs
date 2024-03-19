@@ -17,6 +17,7 @@ const StyledSkill = styled.div`
     align-items: center;
     width: 120px;
     height: 120px;
-    border:1px solid red;
-    
+    border: 1px solid red;
+
+   
 `

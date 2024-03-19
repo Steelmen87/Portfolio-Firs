@@ -8,7 +8,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap-reverse"}>
                     <BlockInfo>
                         <MainTitle>Web Developer</MainTitle>
                         <Name>Hello, my name is Petrov Konstantin</Name>
@@ -46,6 +46,7 @@ const BlockInfo = styled.div`
 const StyledMain = styled.div`
     min-height: 50vh;
     display: flex;
+    margin-bottom: 144px;
 
 `
 const MainTitle = styled.h1`
