@@ -29,6 +29,8 @@ const StyledWork = styled.div`
 
     display: flex;
     flex-direction: row-reverse;
+
+    box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
 `
 const StyledImage = styled.div`
     display: flex;

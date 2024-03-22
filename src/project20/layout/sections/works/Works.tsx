@@ -9,8 +9,8 @@ import second from "./../../../assets/images/Second.png"
 
 const itemsWork = [
     {id: "1", img: `${social}`, title: "Social network", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."},
-    {id: "2", img: `${second}`, title: "Counter", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."},
-    {id: "3", img: `${second}`, title: "Counter", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."},
+    {id: "2", img: `${second}`, title: "Counter", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."}/*,
+    {id: "3", img: `${second}`, title: "Counter", text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."},*/
 ]
 export const Works = () => {
     return (
@@ -39,6 +39,7 @@ const StyleWorksWrapper = styled.div`
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    
 
     row-gap: 78px;
 `

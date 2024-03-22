@@ -10,13 +10,14 @@ export const Footer = () => {
             <FlexWrapper direction={"column"} align={"center"}>
                 <Name>Konstantin</Name>
                 <SocialList>
-                    <SocialItem>
+                    {/*<SocialItem>
                         <SocialLink>
                             <Icon iconId={"instagram"} height={"21"} width={"21"} viewBox={"0 0 21 21"}/>
                         </SocialLink>
-                    </SocialItem>
+                    </SocialItem>*/}
                     <SocialItem>
                         <SocialLink>
+                            <Icon iconId={"instagram"}/>
                             <Icon iconId={"instagram"}/>
                             <Icon iconId={"instagram"}/>
                             <Icon iconId={"instagram"}/>
@@ -30,7 +31,7 @@ export const Footer = () => {
     );
 };
 const StyledFooter = styled.footer`
-   
+    border: 1px solid;
     height: 344px;
     position: relative;
 
@@ -42,6 +43,7 @@ const StyledFooter = styled.footer`
         left: 50%;
         transform: translateX(-50%);
     }
+
     //todo
     /*Медиа запрос height: 344px; уменьшить для приближения  Konstantin Petrov 2024 к StyledBackgroundImage*/
 `

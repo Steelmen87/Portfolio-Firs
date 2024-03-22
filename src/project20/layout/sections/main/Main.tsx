@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper/FlexWrapper";
 import {Container} from "../../../components/container/Container";
 import photo from "../../../assets/images/bg_Photo.png"
+import {Button} from "../../../components/Button";
 
 export const Main = () => {
     return (
@@ -17,11 +18,11 @@ export const Main = () => {
                             information on the about page.
                         </ShotText>
                         <StyledButtonBlock>
-                            <button>Projects</button>
-                            <button>LinkedIn</button>
+                            <Button>Projects</Button>
+                            <Button>LinkedIn</Button>
                         </StyledButtonBlock>
                     </BlockInfo>
-                        <Photo src={photo} alt="photo"/>
+                    <Photo src={photo} alt="photo"/>
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -33,7 +34,7 @@ const Photo = styled.img`
     height: 620px;
     object-fit: cover;
     /*border: 1px solid red;*/
- 
+
     position: relative;
     top: -1px;
     left: 16px;
@@ -41,7 +42,7 @@ const Photo = styled.img`
 const BlockInfo = styled.div`
     max-width: 570px;
     width: 100%;
-   /* border: 1px solid red;*/
+    /* border: 1px solid red;*/
 `
 const StyledMain = styled.div`
     min-height: 50vh;
@@ -71,9 +72,11 @@ const ShotText = styled.span`
 `
 const StyledButtonBlock = styled.div`
     display: flex;
-    border: 1px solid red;
-    button + button {
-        padding-left: 12px;
+
+    ${Button} + ${Button} {
+        margin-left: 12px;
+        background-color: #fff;
+        border: 2px solid rgb(37, 40, 43);
     }
 `
 
